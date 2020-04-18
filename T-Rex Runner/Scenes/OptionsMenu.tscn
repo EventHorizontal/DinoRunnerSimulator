@@ -1,0 +1,246 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scenes/OptionsMenu.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/SpriteColourHandler.gd" type="Script" id=2]
+[ext_resource path="res://Theme/DinoGameTheme.tres" type="Theme" id=3]
+[ext_resource path="res://Assets/Gamer.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Scenes/BackgroundColourHandler.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/CenterContainer.tscn" type="PackedScene" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 4 )
+
+[sub_resource type="ButtonGroup" id=4]
+
+[node name="OptionsMenu" type="Control"]
+margin_right = 240.0
+margin_bottom = 160.0
+script = ExtResource( 1 )
+
+[node name="SpriteColourHandler" type="Node" parent="."]
+editor/display_folded = true
+script = ExtResource( 2 )
+
+[node name="PopupPanel" type="PopupPanel" parent="SpriteColourHandler"]
+margin_left = 99.0
+margin_top = 88.0
+margin_right = 162.0
+margin_bottom = 152.0
+theme = ExtResource( 3 )
+
+[node name="GridContainer" type="GridContainer" parent="SpriteColourHandler/PopupPanel"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 62.0
+margin_bottom = 63.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="Label" type="Label" parent="SpriteColourHandler/PopupPanel/GridContainer" groups=[
+"modulate2",
+]]
+margin_right = 6.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0 )
+text = "H"
+
+[node name="HueSlider" type="HSlider" parent="SpriteColourHandler/PopupPanel/GridContainer" groups=[
+"hover2",
+]]
+margin_left = 10.0
+margin_right = 55.0
+margin_bottom = 9.0
+size_flags_horizontal = 3
+theme = ExtResource( 3 )
+max_value = 1.0
+step = 0.04
+ticks_on_borders = true
+
+[node name="Label2" type="Label" parent="SpriteColourHandler/PopupPanel/GridContainer" groups=[
+"modulate2",
+]]
+margin_top = 17.0
+margin_right = 6.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0 )
+text = "S"
+
+[node name="SaturationSlider" type="HSlider" parent="SpriteColourHandler/PopupPanel/GridContainer" groups=[
+"hover2",
+]]
+margin_left = 10.0
+margin_top = 17.0
+margin_right = 55.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+theme = ExtResource( 3 )
+max_value = 1.0
+step = 0.04
+ticks_on_borders = true
+
+[node name="Label3" type="Label" parent="SpriteColourHandler/PopupPanel/GridContainer" groups=[
+"modulate2",
+]]
+margin_top = 34.0
+margin_right = 6.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0 )
+text = "V"
+
+[node name="ValueSlider" type="HSlider" parent="SpriteColourHandler/PopupPanel/GridContainer" groups=[
+"hover2",
+]]
+margin_left = 10.0
+margin_top = 34.0
+margin_right = 55.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+theme = ExtResource( 3 )
+max_value = 1.0
+step = 0.04
+ticks_on_borders = true
+
+[node name="BackgroundColourHandler" type="Node" parent="."]
+editor/display_folded = true
+script = ExtResource( 5 )
+
+[node name="PopupPanel" type="PopupPanel" parent="BackgroundColourHandler"]
+editor/display_folded = true
+margin_left = 177.0
+margin_top = 88.0
+margin_right = 240.0
+margin_bottom = 152.0
+theme = ExtResource( 3 )
+
+[node name="GridContainer" type="GridContainer" parent="BackgroundColourHandler/PopupPanel"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 62.0
+margin_bottom = 63.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="Label" type="Label" parent="BackgroundColourHandler/PopupPanel/GridContainer" groups=[
+"modulate2",
+]]
+margin_right = 6.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0 )
+text = "H"
+
+[node name="HueSlider" type="HSlider" parent="BackgroundColourHandler/PopupPanel/GridContainer" groups=[
+"hover2",
+]]
+margin_left = 10.0
+margin_right = 61.0
+margin_bottom = 9.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.04
+ticks_on_borders = true
+
+[node name="Label2" type="Label" parent="BackgroundColourHandler/PopupPanel/GridContainer" groups=[
+"modulate2",
+]]
+margin_top = 17.0
+margin_right = 6.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0 )
+text = "S"
+
+[node name="SaturationSlider" type="HSlider" parent="BackgroundColourHandler/PopupPanel/GridContainer" groups=[
+"hover2",
+]]
+margin_left = 10.0
+margin_top = 17.0
+margin_right = 61.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.04
+ticks_on_borders = true
+
+[node name="Label3" type="Label" parent="BackgroundColourHandler/PopupPanel/GridContainer" groups=[
+"modulate2",
+]]
+margin_top = 34.0
+margin_right = 6.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0 )
+text = "V"
+
+[node name="ValueSlider" type="HSlider" parent="BackgroundColourHandler/PopupPanel/GridContainer" groups=[
+"hover2",
+]]
+margin_left = 10.0
+margin_top = 34.0
+margin_right = 61.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.04
+ticks_on_borders = true
+
+[node name="BG" type="ColorRect" parent="."]
+margin_right = 240.0
+margin_bottom = 160.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="CenterContainer" parent="." instance=ExtResource( 6 )]
+editor/display_folded = true
+margin_right = 0.0
+
+[node name="VboxContainer" parent="CenterContainer" index="0"]
+margin_left = 14.0
+margin_right = 225.0
+
+[node name="Easy" parent="CenterContainer/VboxContainer/GridContainer/HBoxContainer2" index="0"]
+group = SubResource( 4 )
+
+[node name="Medium" parent="CenterContainer/VboxContainer/GridContainer/HBoxContainer2" index="1"]
+group = SubResource( 4 )
+
+[node name="Hard" parent="CenterContainer/VboxContainer/GridContainer/HBoxContainer2" index="2"]
+group = SubResource( 4 )
+
+[node name="BackButton" parent="CenterContainer/VboxContainer/GridContainer" index="6" groups=[
+"hover2",
+]]
+
+[connection signal="colour_changed" from="SpriteColourHandler" to="." method="_on_SpriteColourHandler_colour_changed"]
+[connection signal="value_changed" from="SpriteColourHandler/PopupPanel/GridContainer/HueSlider" to="SpriteColourHandler" method="_on_HueSlider_value_changed"]
+[connection signal="value_changed" from="SpriteColourHandler/PopupPanel/GridContainer/SaturationSlider" to="SpriteColourHandler" method="_on_SaturationSlider_value_changed"]
+[connection signal="value_changed" from="SpriteColourHandler/PopupPanel/GridContainer/ValueSlider" to="SpriteColourHandler" method="_on_ValueSlider_value_changed"]
+[connection signal="colour_changed" from="BackgroundColourHandler" to="." method="_on_BackgroundColourHandler_colour_changed"]
+[connection signal="value_changed" from="BackgroundColourHandler/PopupPanel/GridContainer/HueSlider" to="BackgroundColourHandler" method="_on_HueSlider_value_changed"]
+[connection signal="value_changed" from="BackgroundColourHandler/PopupPanel/GridContainer/SaturationSlider" to="BackgroundColourHandler" method="_on_SaturationSlider_value_changed"]
+[connection signal="value_changed" from="BackgroundColourHandler/PopupPanel/GridContainer/ValueSlider" to="BackgroundColourHandler" method="_on_ValueSlider_value_changed"]
+[connection signal="value_changed" from="CenterContainer/VboxContainer/GridContainer/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="gui_input" from="CenterContainer/VboxContainer/GridContainer/GridContainer/LineEdit" to="." method="_on_LineEdit_gui_input"]
+[connection signal="gui_input" from="CenterContainer/VboxContainer/GridContainer/GridContainer/LineEdit2" to="." method="_on_LineEdit2_gui_input"]
+[connection signal="button_down" from="CenterContainer/VboxContainer/GridContainer/HBoxContainer2/Easy" to="." method="_on_Easy_button_down"]
+[connection signal="button_down" from="CenterContainer/VboxContainer/GridContainer/HBoxContainer2/Medium" to="." method="_on_Medium_button_down"]
+[connection signal="button_down" from="CenterContainer/VboxContainer/GridContainer/HBoxContainer2/Hard" to="." method="_on_Hard_button_down"]
+[connection signal="pressed" from="CenterContainer/VboxContainer/GridContainer/BackButton" to="." method="_on_BackButton_pressed"]
+
+[editable path="CenterContainer"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/AnimatedGround/Texture_Rect_anim1.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Floorsprite.gd" type="Script" id=2]
+
+[node name="Sprite" type="Sprite"]
+position = Vector2( 360, 136 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+

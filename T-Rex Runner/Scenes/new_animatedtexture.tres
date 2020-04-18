@@ -1,0 +1,85 @@
+[gd_resource type="AnimatedTexture" load_steps=17 format=2]
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/Texture_Rect_anim1.png-b121c30bcfdfabfd5a1baa950457229a.stex"
+
+[sub_resource type="StreamTexture" id=2]
+load_path = "res://.import/Texture_Rect_anim2.png-51a11352fc0198342609b0dd27078e45.stex"
+
+[sub_resource type="StreamTexture" id=3]
+load_path = "res://.import/Texture_Rect_anim11.png-609e31e40a5691c804efb79fb82c9302.stex"
+
+[sub_resource type="StreamTexture" id=4]
+load_path = "res://.import/Texture_Rect_anim12.png-f80b175ee82d489530a3bf1b6b5e5ac9.stex"
+
+[sub_resource type="StreamTexture" id=5]
+load_path = "res://.import/Texture_Rect_anim13.png-8edd329914bde2538d495e2ea26e670f.stex"
+
+[sub_resource type="StreamTexture" id=6]
+load_path = "res://.import/Texture_Rect_anim14.png-b769db1b9b4e576acc2aa6aa683a5c3f.stex"
+
+[sub_resource type="StreamTexture" id=7]
+load_path = "res://.import/Texture_Rect_anim15.png-a9af7fe215dde2611dfcaad1b163036e.stex"
+
+[sub_resource type="StreamTexture" id=8]
+load_path = "res://.import/Texture_Rect_anim16.png-1dbc9f62cb34f0e3cc888c791491d834.stex"
+
+[sub_resource type="StreamTexture" id=9]
+load_path = "res://.import/Texture_Rect_anim3.png-8690de33751dde726315ad1a0425688b.stex"
+
+[sub_resource type="StreamTexture" id=10]
+load_path = "res://.import/Texture_Rect_anim4.png-9037582933cf126a2ed269508accfd71.stex"
+
+[sub_resource type="StreamTexture" id=11]
+load_path = "res://.import/Texture_Rect_anim5.png-5022b51078d61ed69f1eb48f687196a7.stex"
+
+[sub_resource type="StreamTexture" id=12]
+load_path = "res://.import/Texture_Rect_anim6.png-247902773eeb269f3be8651abbc80e07.stex"
+
+[sub_resource type="StreamTexture" id=13]
+load_path = "res://.import/Texture_Rect_anim7.png-4510a8d30a2d90e89714f6c2abe5da86.stex"
+
+[sub_resource type="StreamTexture" id=14]
+load_path = "res://.import/Texture_Rect_anim8.png-789ca1b18747ce49a6549838b8e3433a.stex"
+
+[sub_resource type="StreamTexture" id=15]
+load_path = "res://.import/Texture_Rect_anim9.png-5a2d1a67e6500dacb5e58d3e6adc75cd.stex"
+
+[sub_resource type="StreamTexture" id=16]
+load_path = "res://.import/Texture_Rect_anim10.png-cd7a4c5afc14602e7b6edaf8b854088e.stex"
+
+[resource]
+frames = 16
+fps = 60.0
+frame_0/texture = SubResource( 1 )
+frame_1/texture = SubResource( 2 )
+frame_1/delay_sec = 0.0
+frame_2/texture = SubResource( 9 )
+frame_2/delay_sec = 0.0
+frame_3/texture = SubResource( 10 )
+frame_3/delay_sec = 0.0
+frame_4/texture = SubResource( 11 )
+frame_4/delay_sec = 0.0
+frame_5/texture = SubResource( 12 )
+frame_5/delay_sec = 0.0
+frame_6/texture = SubResource( 13 )
+frame_6/delay_sec = 0.0
+frame_7/texture = SubResource( 14 )
+frame_7/delay_sec = 0.0
+frame_8/texture = SubResource( 15 )
+frame_8/delay_sec = 0.0
+frame_9/texture = SubResource( 16 )
+frame_9/delay_sec = 0.0
+frame_10/texture = SubResource( 3 )
+frame_10/delay_sec = 0.0
+frame_11/texture = SubResource( 4 )
+frame_11/delay_sec = 0.0
+frame_12/texture = SubResource( 5 )
+frame_12/delay_sec = 0.0
+frame_13/texture = SubResource( 6 )
+frame_13/delay_sec = 0.0
+frame_14/texture = SubResource( 7 )
+frame_14/delay_sec = 0.0
+frame_15/texture = SubResource( 8 )
+frame_15/delay_sec = 0.0
+

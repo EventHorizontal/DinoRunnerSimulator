@@ -1,0 +1,219 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/m23.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Gamer.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Theme/DinoGameTheme.tres" type="Theme" id=3]
+[ext_resource path="res://Scenes/DifficultyButtons.tres" type="ButtonGroup" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 15
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 15
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 15
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+font_data = ExtResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1.0
+
+[node name="VboxContainer" type="VBoxContainer" parent="."]
+margin_left = 15.0
+margin_top = 25.0
+margin_right = 226.0
+margin_bottom = 135.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VboxContainer" groups=[
+"modulate2",
+]]
+margin_right = 211.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Options"
+align = 1
+
+[node name="GridContainer" type="GridContainer" parent="VboxContainer"]
+margin_top = 20.0
+margin_right = 211.0
+margin_bottom = 110.0
+columns = 2
+
+[node name="Music" type="Label" parent="VboxContainer/GridContainer" groups=[
+"modulate2",
+]]
+margin_top = 2.0
+margin_right = 80.0
+margin_bottom = 29.0
+size_flags_horizontal = 9
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Music Volume :
+(50 %)"
+
+[node name="HSlider" type="HSlider" parent="VboxContainer/GridContainer" groups=[
+"hover2",
+]]
+margin_left = 84.0
+margin_right = 211.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme = ExtResource( 3 )
+min_value = -60.0
+max_value = 0.0
+value = -30.0
+ticks_on_borders = true
+
+[node name="Colour Palette" type="Label" parent="VboxContainer/GridContainer" groups=[
+"modulate2",
+]]
+margin_top = 35.0
+margin_right = 80.0
+margin_bottom = 47.0
+size_flags_horizontal = 9
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Colour Palette:"
+
+[node name="GridContainer" type="GridContainer" parent="VboxContainer/GridContainer"]
+margin_left = 84.0
+margin_top = 35.0
+margin_right = 211.0
+margin_bottom = 48.0
+columns = 4
+
+[node name="Label" type="Label" parent="VboxContainer/GridContainer/GridContainer" groups=[
+"modulate2",
+]]
+margin_right = 12.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "FG"
+
+[node name="LineEdit" type="ColorRect" parent="VboxContainer/GridContainer/GridContainer" groups=[
+"modulate2",
+]]
+margin_left = 16.0
+margin_right = 61.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="VboxContainer/GridContainer/GridContainer" groups=[
+"modulate2",
+]]
+margin_left = 65.0
+margin_right = 77.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "BG"
+
+[node name="LineEdit2" type="ColorRect" parent="VboxContainer/GridContainer/GridContainer"]
+margin_left = 81.0
+margin_right = 126.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+color = Color( 0, 0, 0, 1 )
+
+[node name="Difficulty" type="Label" parent="VboxContainer/GridContainer" groups=[
+"modulate2",
+]]
+margin_top = 55.0
+margin_right = 80.0
+margin_bottom = 67.0
+size_flags_horizontal = 9
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Difficulty:"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VboxContainer/GridContainer"]
+margin_left = 84.0
+margin_top = 52.0
+margin_right = 211.0
+margin_bottom = 71.0
+
+[node name="Easy" type="Button" parent="VboxContainer/GridContainer/HBoxContainer2" groups=[
+"hover2",
+]]
+margin_right = 34.0
+margin_bottom = 19.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+toggle_mode = true
+group = ExtResource( 4 )
+text = "Easy"
+align = 0
+
+[node name="Medium" type="Button" parent="VboxContainer/GridContainer/HBoxContainer2" groups=[
+"hover2",
+]]
+margin_left = 38.0
+margin_right = 89.0
+margin_bottom = 19.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+toggle_mode = true
+group = ExtResource( 4 )
+text = "Medium"
+align = 0
+
+[node name="Hard" type="Button" parent="VboxContainer/GridContainer/HBoxContainer2" groups=[
+"hover2",
+]]
+margin_left = 93.0
+margin_right = 127.0
+margin_bottom = 19.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+toggle_mode = true
+group = ExtResource( 4 )
+text = "Hard"
+align = 0
+
+[node name="BackButton" type="Button" parent="VboxContainer/GridContainer"]
+margin_top = 75.0
+margin_right = 34.0
+margin_bottom = 94.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Back"
+align = 0
+
